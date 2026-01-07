@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/components")({
@@ -154,6 +155,11 @@ function RouteComponent() {
               </Button>
             </div>
           </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900">Input</h2>
+          <Input />
         </section>
       </div>
     </div>

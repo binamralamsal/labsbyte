@@ -10,6 +10,8 @@ import {
 import appCss from "../styles.css?url";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 
+import { SiteHeader } from "@/components/site-header";
+
 interface MyRouterContext {
   queryClient: QueryClient;
 }
@@ -59,6 +61,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <SiteHeader />
         {children}
         <TanStackDevtools
           config={{

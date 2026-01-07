@@ -209,6 +209,16 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  --animate-headerSticky: headerSticky var(--duration, 0.5s) ease-in-out;
+  @keyframes headerSticky {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer base {
@@ -221,4 +231,9 @@
   html {
     @apply font-sans;
   }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
